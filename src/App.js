@@ -5,6 +5,7 @@ import Coins from './components/Coins'
 import Coin from './routes/Coin'
 import Navbar from './components/Navbar'
 
+
 function App() {
 
   const [coins, setCoins] = useState([])
@@ -15,7 +16,7 @@ function App() {
   useEffect (() => {
     axios.get(url).then((response) => {
       setCoins(response.data)
-      console.log(response.data[0])
+      // console.log(response.data[0])
     }).catch((error) => {
       console.log(error)
     })
